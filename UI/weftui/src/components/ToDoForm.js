@@ -5,7 +5,7 @@ const { Title } = Typography
 function ToDoForm({ onFinish }) {
     return (
         <>
-            <Title level={3}>Add ToDo</Title>
+            <Title level={3}>Add Something</Title>
             <Form
                 name="basic"
                 autoComplete="off"

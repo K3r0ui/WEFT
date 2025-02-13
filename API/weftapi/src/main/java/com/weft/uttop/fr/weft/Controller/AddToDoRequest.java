@@ -1,4 +1,4 @@
 package com.weft.uttop.fr.weft.Controller;
 
-public record AddToDoRequest(String description) {
+public record AddToDoRequest(String description, String user) {
 }

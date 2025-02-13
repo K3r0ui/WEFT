@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { myToDoListApi } from '../components/MyToDoListApi'
+import { myToDoListApi } from './MyToDoListApi'
 import { Layout, Col, Row } from 'antd'
 import ToDoForm from './ToDoForm'
 import ToDoTable from './ToDoTable'
@@ -12,7 +12,7 @@ function Home() {
     const [todos, setTodos] = useState([])
     const auth = useAuth()
     const access_token = auth.user.access_token
-
+    const username = auth.user.profile.preferred_username;
     useEffect(() => {
         handleToDos()
     }, [])
@@ -28,7 +28,7 @@ function Home() {
 
     const onFinish = async (addToDoRequest) => {
         try {
-            await myToDoListApi.addToDo(addToDoRequest, access_token)
+            await myToDoListApi.addToDo(addToDoRequest, username,access_token)
             await handleToDos()
         } catch (error) {
             handleLogError(error)
@@ -54,7 +54,7 @@ function Home() {
     }
     const isUser = () => {
         const { profile } = auth.user
-        console.log(auth.user);
+        console.log(auth.user.profile.preferred_username);
         const hasClientRole = profile?.client_roles?.includes('user')
         console.log(profile.client_roles);
         console.log(hasClientRole)
@@ -79,7 +79,7 @@ function Home() {
 
     return (
         <Layout>
-            <Header style={headerStyle}>MyToDoList</Header>
+            <Header style={headerStyle}>Crud Test</Header>
             <AuthBar />
             {isUser() ? (
                 <Content>

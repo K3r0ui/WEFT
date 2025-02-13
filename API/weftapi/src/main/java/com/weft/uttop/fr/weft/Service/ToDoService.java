@@ -10,7 +10,7 @@ public interface ToDoService {
 
     List<ToDo> getToDos();
 
-    ToDo addToDo(String description);
+    ToDo addToDo(String description, String user);
 
     void deleteToDo(long id);
 

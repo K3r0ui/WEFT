@@ -13,10 +13,16 @@ function getToDos(access_token) {
     })
 }
 
-function addToDo(addToDoRequest, access_token) {
-    return instance.post('/api/todos', addToDoRequest, {
-        headers: { 'Content-type': 'application/json', 'Authorization': `Bearer ${access_token}` }
-    })
+function addToDo(addToDoRequest, username, access_token) {
+    return instance.post('/api/todos', 
+        { 
+            description: addToDoRequest.description,
+            user: username
+        },
+        {
+            headers: { 'Content-type': 'application/json', 'Authorization': `Bearer ${access_token}` }
+        }
+    );
 }
 
 function deleteToDo(id, access_token) {

@@ -5,6 +5,10 @@ import com.weft.uttop.fr.weft.Exception.ToDoNotFoundException;
 import com.weft.uttop.fr.weft.model.ToDo;
 import com.weft.uttop.fr.weft.repository.ToDoRepository;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,8 +31,9 @@ public class ToDoServiceImpl implements ToDoService {
     }
 
     @Override
-    public ToDo addToDo(String description) {
+    public ToDo addToDo(String description, String user) {
         ToDo toDo = new ToDo();
+        toDo.setUser(user);
         toDo.setDescription(description);
         return toDoRepository.save(toDo);
     }

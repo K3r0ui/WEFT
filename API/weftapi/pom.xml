@@ -18,6 +18,7 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+
         <!-- Spring Boot Web and Data JPA starters -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -61,6 +62,13 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+		<!-- db -->
+<!-- Add MySQL dependency -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.29</version> 
+    </dependency>
 
         <!-- Spring Security for OAuth2 Resource Server -->
         <dependency>

@@ -2,6 +2,8 @@ package com.weft.uttop.fr.weft.Controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.weft.uttop.fr.weft.model.ToDo;
+import com.nimbusds.jwt.JWT;
 import com.weft.uttop.fr.weft.Service.ToDoService;
 
 import java.util.List;
@@ -36,11 +39,12 @@ public class ToDoController {
     // Create a new ToDo
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public ToDo addToDo(@RequestBody AddToDoRequest addToDoRequest) {
-        return toDoService.addToDo(addToDoRequest.description());
+    public ToDo addToDo(@RequestBody AddToDoRequest addToDoRequest , @AuthenticationPrincipal Jwt jwt) {
+        String username = jwt.getClaimAsString("preferred_username");
+        return toDoService.addToDo(addToDoRequest.description(), username);
     }
 
-    // Delete a ToDo by ID
+    // Delete a ToDo byz ID
     @DeleteMapping("/{id}")
     public void deleteToDo(@PathVariable Long id) {
         toDoService.deleteToDo(id);
