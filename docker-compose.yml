@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  react-app:
+    image: node:16
+    container_name: weft-ui
+    working_dir: /app
+    volumes:
+      - ./UI/weftui:/app
+    ports:
+      - "3000:3000"
+    command: "npm start"
+    depends_on:
+      - spring-boot
+      - keycloak
+    networks:
+      - app-network
+
+  spring-boot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weft-api
+    ports:
+      - "8010:8010"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/weftdb
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - KEYCLOAK_URL=http://keycloak:8080
+    depends_on:
+      - mysql-db
+      - keycloak
+    networks:
+      - app-network
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.4
+    container_name: keycloak-identity-manager
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+
+
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./Data:/opt/keycloak/data
+    command: ["start-dev"]
+    networks:
+      - app-network
+
+  mysql-db:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      - MYSQL_DATABASE=weftdb
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+volumes:
+  keycloak-data:
+    driver: local
+  mysql-data:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge

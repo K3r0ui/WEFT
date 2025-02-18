@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
-        <Route path="/new" element={<NewHome />} />
+        <Route path="/admin" element={<PrivateRoute><NewHome /></PrivateRoute>} />
         <Route path="/landingpage" element={<LandingPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

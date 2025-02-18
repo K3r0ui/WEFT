@@ -42,37 +42,10 @@ const LandingPage = () => {
             </button>
             {/* Mobile menu toggle: End */}
             <Link to="/landing-page" className="app-brand-link">
-              <span className="app-brand-logo demo">
-                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
-                    fill="#7367F0"
-                  />
-                  <path
-                    opacity="0.06"
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
-                    fill="#161616"
-                  />
-                  <path
-                    opacity="0.06"
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
-                    fill="#161616"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
-                    fill="#7367F0"
-                  />
-                </svg>
+              <span>
+                <svg  version="1.0" xmlns="http://www.w3.org/2000/svg"  width="140.000000pt" height="52.000000pt" viewBox="0 0 300.000000 202.000000"  preserveAspectRatio="xMidYMid meet">  <g transform="translate(0.000000,202.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"> <path d="M754 1325 c-6 -15 -65 -38 -99 -39 -29 -1 -27 -40 3 -44 12 -2 22 1 22 7 0 13 53 41 77 41 20 0 73 -61 73 -84 0 -23 19 -30 38 -13 22 18 136 47 162 40 15 -4 20 0 20 16 0 14 -6 21 -20 21 -11 0 -20 -4 -20 -8 0 -8 -101 -32 -136 -32 -24 0 -69 44 -83 83 -11 29 -28 35 -37 12z"/> <path d="M1180 1213 c0 -5 20 -80 45 -167 25 -87 45 -165 45 -172 0 -7 4 -15 9 -19 5 -3 33 56 62 130 29 74 56 135 59 135 6 -1 100 -242 100 -258 0 -7 4 -12 8 -12 10 0 115 361 107 368 -16 17 -36 -21 -64 -125 -18 -65 -35 -125 -38 -133 -4 -14 -102 221 -103 248 -1 34 -20 0 -65 -118 -27 -71 -53 -130 -56 -130 -4 0 -15 31 -24 70 -31 128 -52 185 -69 188 -9 2 -16 -1 -16 -5z"/> <path d="M1690 1035 l0 -185 105 0 c98 0 105 1 105 20 0 18 -6 19 -85 17 l-85 -2 0 72 0 73 56 0 c47 0 55 3 52 18 -3 13 -14 17 -56 17 l-52 0 0 58 0 57 85 0 c78 0 85 2 85 20 0 19 -7 20 -105 20 l-105 0 0 -185z"/> <path d="M1980 1035 c0 -158 2 -185 15 -185 12 0 15 17 15 90 l0 90 50 0 c43 0 50 3 50 20 0 17 -7 20 -50 20 l-50 0 0 55 0 55 85 0 c78 0 85 2 85 20 0 19 -7 20 -100 20 l-100 0 0 -185z"/> <path d="M2212 1203 c3 -14 13 -18 43 -18 l40 0 3 -167 c2 -139 5 -168 17 -168 12 0 15 29 17 168 l3 167 43 -3 c37 -3 42 -1 42 17 0 20 -5 21 -106 21 -95 0 -105 -2 -102 -17z"/> <path d="M730 1170 c-15 -27 -88 -64 -130 -64 -32 -1 -35 -4 -35 -31 0 -27 3 -30 30 -30 23 0 31 5 33 21 3 24 100 75 132 69 26 -5 65 -36 66 -52 2 -28 5 -32 24 -38 26 -8 50 10 50 38 0 23 26 46 53 47 23 0 33 26 17 45 -14 17 -40 9 -40 -14 0 -20 -36 -44 -70 -46 -29 -2 -80 30 -80 50 0 7 -7 16 -16 19 -22 8 -22 8 -34 -14z"/> <path d="M644 1026 c-28 -28 -34 -41 -34 -78 0 -24 7 -54 16 -66 14 -21 14 -25 -14 -71 l-30 -48 30 -17 c16 -10 30 -16 32 -14 1 1 13 24 27 51 21 41 28 47 56 47 50 0 81 20 104 66 18 38 19 49 9 79 -17 52 -62 85 -117 85 -38 0 -50 -5 -79 -34z m154 -21 c33 -39 30 -89 -8 -127 -27 -26 -36 -30 -69 -25 -36 4 -38 3 -61 -39 -12 -24 -27 -44 -31 -44 -13 0 -11 7 16 50 l25 40 -20 32 c-23 38 -25 63 -6 97 31 56 111 64 154 16z"/> <path d="M675 995 c-14 -13 -25 -36 -25 -50 0 -33 42 -75 75 -75 14 0 37 11 50 25 14 13 25 36 25 50 0 14 -11 37 -25 50 -13 14 -36 25 -50 25 -14 0 -37 -11 -50 -25z m85 -15 c11 -11 20 -27 20 -35 0 -17 -35 -55 -51 -55 -18 0 -46 19 -53 35 -7 20 13 63 33 68 28 8 31 7 51 -13z"/> </g> </svg>  
               </span>
-              <span className="app-brand-text demo menu-text fw-bold ms-2 ps-1">WEFT</span>
+              <span className="app-brand-text demo menu-text fw-bold ms-2 ps-1"></span>
             </Link>
           </div>
           {/* Menu logo wrapper: End */}
@@ -332,13 +305,13 @@ const LandingPage = () => {
                 <div
                   class="bg-label-success border border-bottom-0 border-label-success position-relative team-image-box">
                   <img
-                    src="../../assets/img/front-pages/landing-page/team-member-4.png"
+                    src="../../assets/img/front-pages/landing-page/nasroB.png"
                     class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
                     alt="human image" />
                 </div>
                 <div class="card-body border border-top-0 border-label-success text-center">
-                  <h5 class="card-title mb-0">Chris Watkins</h5>
-                  <p class="text-muted mb-0">Marketing Manager</p>
+                  <h5 class="card-title mb-0">Naseddine Bouchemel</h5>
+                  <p class="text-muted mb-0">Software engineer</p>
                 </div>
               </div>
             </div>
