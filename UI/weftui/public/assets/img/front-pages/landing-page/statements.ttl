@@ -1,0 +1,230 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix : <http://airbus.eu/abox/msp3#> .
+@prefix DSL_Customization: <http://www.magicdraw.com/schemas/DSL_Customization.xmi> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns2: <http://www.enit.org/2024/06/ns2#> .
+@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix ns4: <http://www.pics.lgp.uttop.fr/ontologies/systemdesign#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix ns3: <http://airbus.eu/ontology/msp#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix xmi: <http://www.omg.org/spec/XMI/20131001> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix MD_Customization_for_SysML__additional_stereotypes: <http://www.magicdraw.com/spec/Customization/180/SysML> .
+@prefix sensor-core: <http://www.ontocommons.eu/test/sensor-core#> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix sysml: <http://www.omg.org/spec/SysML/20181001/SysML> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix ns: <http://mysparql.ai/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix Free_Form_Elements_Profile: <http://www.magicdraw.com/schemas/Free_Form_Elements_Profile.xmi> .
+@prefix smo: <http://www.pics.lgp.uttop.fr/ontologies/SimuOnto/> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix uml: <http://www.omg.org/spec/UML/20131001> .
+@prefix si: <https://www.w3schools.com/rdf/> .
+@prefix msp3: <http://airbus.eu/ontology/msp3#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix AMA___Airbus_MBSE_Automations_Profile: <http://www.magicdraw.com/schemas/AMA___Airbus_MBSE_Automations_Profile.xmi> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix MD_Customization_for_Requirements__additional_stereotypes: <http://www.magicdraw.com/spec/Customization/180/Requirements> .
+@prefix extfn: <http://localhost:8100/repositories/excelab_kb/js#> .
+@prefix StandardProfile: <http://www.omg.org/spec/UML/20131001/StandardProfile> .
+@prefix Validation_Profile: <http://www.magicdraw.com/schemas/Validation_Profile.xmi> .
+@prefix MagicDraw_Profile: <http://www.omg.org/spec/UML/20131001/MagicDrawProfile> .
+@prefix Dependency_Matrix_Profile: <http://www.magicdraw.com/schemas/Dependency_Matrix_Profile.xmi> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix MBSELab: <http://www.magicdraw.com/schemas/MBSELab.xmi> .
+@prefix AMP___Airbus_MBSE_Profile: <http://www.magicdraw.com/schemas/AMP___Airbus_MBSE_Profile.xmi> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix AnnotationVocabulary: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+iof:hasComponentPartAtAllTimes a owl:ObjectProperty .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674846567_192564_1863> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680674846567_192564_1863>;
+  iof:hasComponentPartAtAllTimes <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674703380_972682_1861>,
+    <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674191087_283238_1848>, <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674070608_37990_1844>,
+    <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674168613_879943_1846>;
+  iof:prescribedBy <https://airbus.eu/semhub/data/airbus/globaleee_1045467100313_135436_1> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674703380_972682_1861> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_19_0_4_a750247_1680674703380_972682_1861> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674191087_283238_1848> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_19_0_4_a750247_1680674191087_283238_1848> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674070608_37990_1844> a owl:NamedIndividual,
+    <https://airbus.eu/semhub/data/airbus/architecture/C_19_0_4_a750247_1680674070608_37990_1844> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680674168613_879943_1846> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_19_0_4_a750247_1680674168613_879943_1846> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963960_495613_8675> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_2021x_2_ac60276_1727090963960_495613_8675> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090964465_490958_8877> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727090964465_490958_8877>;
+  iof:hasComponentPartAtAllTimes <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963960_495613_8675>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963959_558425_8674>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963958_542479_8672>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963959_336689_8673>;
+  iof:prescribedBy <https://airbus.eu/semhub/data/airbus/globaleee_1045467100313_135436_1> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963959_558425_8674> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_2021x_2_ac60276_1727090963959_558425_8674> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963958_542479_8672> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_2021x_2_ac60276_1727090963958_542479_8672> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727090963959_336689_8673> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/C_2021x_2_ac60276_1727090963959_336689_8673> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1726838903969_750209_79508>
+  a owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1726838903969_750209_79508>;
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/hasFunctionPartAtAllTimes> <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271855101_516332_7583>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271880176_925994_7585>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271886808_553909_7587>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271885809_201381_7586>;
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/prescribedBy> <https://airbus.eu/semhub/data/airbus/globaleee_1045467100313_135436_1> .
+
+<http://www.pics.lgp.uttop.fr/ontologies/systemdesign/hasFunctionPartAtAllTimes> a
+    owl:ObjectProperty .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271855101_516332_7583> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727271855101_516332_7583> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271880176_925994_7585> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727271880176_925994_7585> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271886808_553909_7587> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727271886808_553909_7587> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727271885809_201381_7586> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727271885809_201381_7586> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680666871804_315195_213> a owl:NamedIndividual,
+    <https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680666871804_315195_213> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727273828238_611282_9136> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727273828238_611282_9136> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680667019812_744055_215> a owl:NamedIndividual,
+    <https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680667019812_744055_215> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680667047708_252491_217> a owl:NamedIndividual,
+    <https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680667047708_252491_217>;
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/hasFunctionPartAtAllTimes> <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727273828238_611282_9136>,
+    <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727273828236_77188_9133>;
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/prescribedBy> <https://airbus.eu/semhub/data/airbus/globaleee_1045467100313_135436_1> .
+
+<http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1727273828236_77188_9133> a
+    owl:NamedIndividual, <https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727273828236_77188_9133> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680667062837_798129_219> a owl:NamedIndividual,
+    <https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680667062837_798129_219> .
+
+<http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680666510571_804292_11> a owl:NamedIndividual,
+    <https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680666510571_804292_11>;
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/hasFunctionPartAtAllTimes> <http://airbus.eu/abox/msp3/default#I_2021x_2_ac60276_1726838903969_750209_79508>,
+    <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680666871804_315195_213>, <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680667019812_744055_215>,
+    <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680667047708_252491_217>, <http://airbus.eu/abox/msp3/default#I_19_0_4_a750247_1680667062837_798129_219>;
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/prescribedBy> <https://airbus.eu/semhub/data/airbus/globaleee_1045467100313_135436_1> .
+
+<https://airbus.eu/semhub/data/airbus/architecture/eee_1045467100313_135436_1> a <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemDesignSpecification>,
+    dcat:Resource;
+  rdfs:label "";
+  terms:title "Testplant05";
+  terms:creator "SP004A1C";
+  terms:issued "2025-02-24T16:02:24Z"^^xsd:dateTime .
+
+<https://airbus.eu/semhub/data/airbus/architecture/file_eee_1045467100313_135436_1>
+  a <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/File>;
+  rdfs:label "file:/C:/Users/BQN/Desktop/Work/Airbus/api_backend/server/testplant05Owner-purged.xmi";
+  <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/serializes> <https://airbus.eu/semhub/data/airbus/architecture/eee_1045467100313_135436_1> .
+
+<https://airbus.eu/semhub/data/airbus/globaleee_1045467100313_135436_1> a <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/IndustrialSystemDesignSpecification>;
+  iof:informationPartOf <https://airbus.eu/semhub/data/airbus/eee_1045467100313_135436_1> .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680674846567_192564_1863>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Global Factories MAKE Fuselage" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727090963959_336689_8673>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory Daher Tarbes" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727090964465_490958_8877>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Global Factories BUY Fuselage" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680674168613_879943_1846>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory Daher Tarbes" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727090963958_542479_8672>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory Airbus Toulouse" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680674070608_37990_1844>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory Airbus Toulouse" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727090963959_558425_8674>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory Airbus Broughton" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680674191087_283238_1848>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory Airbus Broughton" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1727090963960_495613_8675>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory DA Bordeaux" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680674703380_972682_1861>
+  rdfs:subClassOf iof:System;
+  skos:prefLabel "Factory DA Bordeaux" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_2021x_2_ac60276_1726838903969_750209_79508>
+  rdfs:subClassOf <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemFunction>;
+  rdfs:label "Aircraft Final Assembly" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680666871804_315195_213>
+  rdfs:subClassOf <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemFunction>;
+  rdfs:label "Wing Manufacturing" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680667019812_744055_215>
+  rdfs:subClassOf <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemFunction>;
+  rdfs:label "Fuselage Manufacturing" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680666510571_804292_11>
+  rdfs:subClassOf <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemFunction>;
+  rdfs:label "AC Manufacturing" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680667062837_798129_219>
+  rdfs:subClassOf <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemFunction>;
+  rdfs:label "Fuselage Assembly" .
+
+<https://airbus.eu/semhub/data/airbus/architecture/_19_0_4_a750247_1680667047708_252491_217>
+  rdfs:subClassOf <http://www.pics.lgp.uttop.fr/ontologies/systemdesign/SystemFunction>;
+  rdfs:label "Engine installation" .

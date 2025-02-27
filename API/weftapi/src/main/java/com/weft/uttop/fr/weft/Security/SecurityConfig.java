@@ -21,15 +21,14 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authz) ->
                 authz.requestMatchers(HttpMethod.GET, "/api/todos").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/admin").hasRole(ADMIN)
-                .requestMatchers(HttpMethod.GET, "/api/user").hasRole(USER)
+                .requestMatchers(HttpMethod.GET, "/api/admin/**").hasRole(ADMIN)
+                .requestMatchers(HttpMethod.GET, "/api/user/**").hasRole(USER)
                 .anyRequest().authenticated());
 
         http.sessionManagement(sess -> sess.sessionCreationPolicy(
                 SessionCreationPolicy.STATELESS));
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtConverter)));
-        
+
         return http.build();
     }
-
 }

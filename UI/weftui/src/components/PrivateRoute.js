@@ -1,38 +1,69 @@
-import { useAuth } from "react-oidc-context"
-import { Spin, Typography } from 'antd'
-const { Title } = Typography
+// src/PrivateRoute.js
+import { useAuth } from "react-oidc-context";
+import { useUser } from "../UserContext";
+import { Spin, Typography } from "antd";
+import { Navigate } from "react-router-dom";
 
-function PrivateRoute({ children }) {
-    const auth = useAuth()
+const { Title } = Typography;
 
-    const textAlignStyle = { textAlign: "center" }
-    const subTitleStyle = { color: 'grey' }
+function PrivateRoute({ children, requiredRole }) {
+  const auth = useAuth();
+  const { user } = useUser(); // Access user from UserContext
 
-    if (auth.isLoading) {
-        return (
-            <div style={textAlignStyle}>
-                <Title>Keycloak is loading</Title>
-                <Title level={2} style={subTitleStyle}>or running authorization code flow with PKCE</Title>
-                <Spin size="large"></Spin>
-            </div>
-        )
-    }
+  const textAlignStyle = { textAlign: "center" };
+  const subTitleStyle = { color: "grey" };
 
-    if (auth.error) {
-        return (
-            <div style={textAlignStyle}>
-                <Title>Oops ...</Title>
-                <Title level={2} style={subTitleStyle}>{auth.error.message}</Title>
-            </div>
-        )
-    }
+  // Loading state
+  if (auth.isLoading) {
+    return (
+      <div style={textAlignStyle}>
+        <Title>Keycloak is loading</Title>
+        <Title level={2} style={subTitleStyle}>
+          or running authorization code flow with PKCE
+        </Title>
+        <Spin size="large" />
+      </div>
+    );
+  }
 
-    if (!auth.isAuthenticated) {
-        auth.signinRedirect()
-        return null
-    }
+  // Error state
+  if (auth.error) {
+    return (
+      <div style={textAlignStyle}>
+        <Title>Oops ...</Title>
+        <Title level={2} style={subTitleStyle}>
+          {auth.error.message}
+        </Title>
+      </div>
+    );
+  }
 
-    return children
+  if (!auth.isAuthenticated) {
+    auth.signinRedirect();
+    return null;
+  }
+
+  // Check if user and user.profile exist
+  if (!user || !user.profile) {
+    return (
+      <div style={textAlignStyle}>
+        <Title>Oops ...</Title>
+        <Title level={2} style={subTitleStyle}>
+          User profile is unavailable.
+        </Title>
+      </div>
+    );
+  }
+
+  // Get roles from user.profile safely
+  const userRoles = user.profile.client_roles || [];
+
+  // Check if the user has the required role
+  if (requiredRole && !userRoles.includes(requiredRole)) {
+    return <Navigate to="/notfound" />;
+  }
+
+  return children;
 }
 
-export default PrivateRoute
+export default PrivateRoute;

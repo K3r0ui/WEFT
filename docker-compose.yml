@@ -28,7 +28,6 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/weftdb
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
-      - KEYCLOAK_URL=http://keycloak:8080
     depends_on:
       - mysql-db
       - keycloak
@@ -41,8 +40,6 @@ services:
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
-
-
     ports:
       - "8080:8080"
     volumes:
@@ -50,7 +47,7 @@ services:
     command: ["start-dev"]
     networks:
       - app-network
-
+  
   mysql-db:
     image: mysql:8
     container_name: mysql-db
@@ -59,10 +56,10 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
       - mysql-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
     networks:
       - app-network
+    ports:
+      - "3306:3306"
 
 volumes:
   keycloak-data:

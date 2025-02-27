@@ -9,7 +9,7 @@ COPY ./API/weftapi/pom.xml /app/
 RUN mvn dependency:go-offline
 
 COPY ./API/weftapi /app/
-RUN ls -l /app
+
 
 RUN mvn clean install -DskipTests
 

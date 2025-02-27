@@ -95,7 +95,7 @@ const LandingPage = () => {
                 </div>
               </li>
               <li className="nav-item">
-                <Link className="nav-link fw-medium" to="/new" target="_blank">Admin</Link>
+                <Link className="nav-link fw-medium" to="/admin" target="_blank">Admin</Link>
               </li>
             </ul>
           </div>
