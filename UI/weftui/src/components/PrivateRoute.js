@@ -1,4 +1,3 @@
-// src/PrivateRoute.js
 import { useAuth } from "react-oidc-context";
 import { useUser } from "../UserContext";
 import { Spin, Typography } from "antd";
