@@ -1,4 +1,3 @@
-// src/context/UserContext.js
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { useAuth } from "react-oidc-context";
 
