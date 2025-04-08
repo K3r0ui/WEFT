@@ -61,4 +61,5 @@ Follow these steps to get everything up and running:
 4. **Access the App**
 
    - Frontend: [http://localhost:3000](http://localhost:3000)
-   - Backend API: [http://localhost:8080](http://localhost:8080)
+   - Backend API: [http://localhost:8010](http://localhost:8010)
+   - Keycloak: [http://localhost:8080](http://localhost:8080)
